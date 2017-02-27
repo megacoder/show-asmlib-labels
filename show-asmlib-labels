@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+tail -n+3 /proc/partitions                                                      |
+while read maj min siz nam; do
+sudo /usr/sbin/oracleasm querydisk /dev/${nam}
+done
